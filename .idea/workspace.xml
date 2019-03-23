@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c136f6-c8c4-413f-a59f-04746e682eae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/human_withLauraUPDATE.rdf" beforeDir="false" afterPath="$PROJECT_DIR$/human_withLauraUPDATE.rdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniprojejRDF.py" beforeDir="false" afterPath="$PROJECT_DIR$/miniprojejRDF.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miniprojejRDF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="90">
+              <caret line="72" selection-start-line="72" selection-start-column="2" selection-end-line="95" selection-end-column="92" />
               <folding>
                 <element signature="e#41#54#0" expanded="true" />
               </folding>
@@ -28,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/human_withLauraUPDATE.rdf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
+            <state relative-caret-position="1260">
               <caret line="70" column="74" selection-start-line="70" selection-start-column="69" selection-end-line="70" selection-end-column="74" />
             </state>
           </provider>
@@ -119,12 +118,12 @@
       <workItem from="1553101604792" duration="313000" />
       <workItem from="1553258929308" duration="1791000" />
       <workItem from="1553365331136" duration="1328000" />
-      <workItem from="1553370034599" duration="6587000" />
+      <workItem from="1553370034599" duration="6807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10019000" />
+    <option name="totallyTimeSpent" value="10239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -175,15 +174,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/human_withLauraUPDATE.rdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
+        <state relative-caret-position="1260">
           <caret line="70" column="74" selection-start-line="70" selection-start-column="69" selection-end-line="70" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miniprojejRDF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="90">
+          <caret line="72" selection-start-line="72" selection-start-column="2" selection-end-line="95" selection-end-column="92" />
           <folding>
             <element signature="e#41#54#0" expanded="true" />
           </folding>

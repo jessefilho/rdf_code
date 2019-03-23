@@ -8,8 +8,8 @@ from rdflib import Namespace
 
 #1 - programme simple comment exploiter	par	programme un jeu de	données RDF	et RDFS
 #2 - ouvrir [DONE]
-#3 - modifier [TO DO]
-#4 - sauvegarder [TO DO]
+#3 - modifier [DONE]
+#4 - sauvegarder [DONE]
 #5 - rechercher	des	parties [DOING]
 #6 - les exploiter d’une manière ou	d’une autre	et sauvegarder les résultats obtenus [DONE]
 #7 - tester	des	requêtes SPARQL, sans schéma en	RDFS [TO DO]
@@ -64,9 +64,9 @@ print "check transitive objects"
 for i in modifG.transitive_objects(laura,humans.shirtsize):
     print i
 
-fp = open('human_withLauraUPDATE.rdf','wb')
-fp.write(g.serialize(format='turtle'))
-fp.close()
+# fp = open('human_withLauraUPDATE.rdf','wb')
+# fp.write(g.serialize(format='turtle'))
+# fp.close()
 
 
 
