@@ -28,5 +28,20 @@ FILTER (xsd:string(?name) = "John" )
 """)
 
 
+#for row in qres:
+#    print("Name: %s Pointure: %s shirtsize:%s Age:%s shoesize:%s trouserssize:%s" % row)
+
+#List predicates:
+qres = g.query(
+    """
+    PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+    PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+    
+    SELECT DISTINCT ?predicate
+    WHERE {
+    ?s ?predicate ?o
+    }
+    """)
+
 for row in qres:
-    print("Name: %s Pointure: %s shirtsize:%s Age:%s shoesize:%s trouserssize:%s" % row)
+    print(row)
