@@ -39,7 +39,7 @@ g.parse('human.rdf')
 # ------------------------------------- #2 [DONE]
 #for s,p,o in g:
 #    print s,p,o
-# ------------------------------------- #3 [DOING]
+# ------------------------------------- #3 [DONE]
 # I will add data of ?name ?pointure ?shirtsize ?age ?shoesize ?trouserssize
 #
 
@@ -53,20 +53,20 @@ lauraTrouserssize = rd.Literal('36')
 
 modifG = rd.Graph()
 
-modifG.bind('humans', humans, False)
+g.bind('humans', humans, False)
 
-modifG.add((laura, humans.shirtsize, lauraShirtsize))
-modifG.add((laura, humans.age, lauraAge))
-modifG.add((laura, humans.shoesize, lauraShoesize))
-modifG.add((laura, humans.trouserssize, lauraTrouserssize))
+g.add((laura, humans.shirtsize, lauraShirtsize))
+g.add((laura, humans.age, lauraAge))
+g.add((laura, humans.shoesize, lauraShoesize))
+g.add((laura, humans.trouserssize, lauraTrouserssize))
 
-print "Parents, forward from `ex:person`:"
+print "check transitive objects"
 for i in modifG.transitive_objects(laura,humans.shirtsize):
     print i
 
-# fp = open('human_withLauraUPDATE.rdf','wb')
-# fp.write(g.serialize(format='turtle'))
-# fp.close()
+fp = open('human_withLauraUPDATE.rdf','wb')
+fp.write(g.serialize(format='turtle'))
+fp.close()
 
 
 
