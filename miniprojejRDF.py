@@ -10,10 +10,10 @@ from rdflib import Namespace
 #2 - ouvrir [DONE]
 #3 - modifier [DONE]
 #4 - sauvegarder [DONE]
-#5 - rechercher	des	parties [DOING]
+#5 - rechercher	des	parties [DONE]
 #6 - les exploiter d’une manière ou	d’une autre	et sauvegarder les résultats obtenus [DONE]
-#7 - tester	des	requêtes SPARQL, sans schéma en	RDFS [TO DO]
-#8 - tester	des	requêtes SPARQL, avec schéma en	RDFS [TO DO]
+#7 - tester	des	requêtes SPARQL, sans schéma en	RDFS [DONE]
+#8 - tester	des	requêtes SPARQL, avec schéma en	RDFS [DONE]
 
 
 #PREDICATES OF humans
@@ -60,10 +60,10 @@ g.add((laura, humans.age, lauraAge))
 g.add((laura, humans.shoesize, lauraShoesize))
 g.add((laura, humans.trouserssize, lauraTrouserssize))
 
-print "check transitive objects"
-for i in modifG.transitive_objects(laura,humans.shirtsize):
-    print i
-
+# print "check transitive objects"
+# for i in modifG.transitive_objects(laura,humans.shirtsize):
+#     print i
+# ------------------------------------- #4 [DONE]
 # fp = open('human_withLauraUPDATE.rdf','wb')
 # fp.write(g.serialize(format='turtle'))
 # fp.close()
@@ -118,6 +118,7 @@ FILTER (xsd:string(?name) = "John" )
 #for row in qres:
 #    print("Name: %s Pointure: %s shirtsize:%s Age:%s shoesize:%s trouserssize:%s" % row)
 
+# ------------------------------------- #5 [DONE]
 #List predicates:
 qres = g.query(
     """
@@ -153,3 +154,71 @@ qres = g.query(
 #     print('name:%s friend:%s' % row)
 
 #g.serialize(destination='output.txt', format='turtle')
+
+
+
+# ------------------------------------- #8 [DONE]
+g_schema=rdflib.Graph()
+g_schema.parse('human.rdfs')
+g_schema.parse('human.rdf')
+
+qres = g_schema.query(
+    """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  
+    SELECT DISTINCT ?type
+    WHERE {
+      ?s a ?type.
+    }
+    """)
+
+for row in qres:
+    print(row)
+
+qres = g_schema.query(
+    """
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+     
+     
+    SELECT *
+    WHERE {
+        ?subject rdfs:subClassOf ?supertype
+    }
+    """)
+
+# for row in qres:
+#     print(row)
+
+qres = g_schema.query(
+    """
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+    SELECT *
+    WHERE {
+        ?subject rdfs:Person ?supertype
+    }
+    """)
+
+# for row in qres:
+#     print(row)
+
+qres = g_schema.query(
+    """
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX humans: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+     
+     
+    SELECT distinct ?name ?spouse
+    WHERE {
+        ?name ?p humans:Man .
+        ?name humans:hasSpouse ?spouse
+	
+    }
+    """)
+
+for row in qres:
+    print(row)

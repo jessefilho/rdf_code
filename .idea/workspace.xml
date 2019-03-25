@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c136f6-c8c4-413f-a59f-04746e682eae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniprojejRDF.py" beforeDir="false" afterPath="$PROJECT_DIR$/miniprojejRDF.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miniprojejRDF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="72" selection-start-line="72" selection-start-column="2" selection-end-line="95" selection-end-column="92" />
+            <state relative-caret-position="270">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
               <folding>
                 <element signature="e#41#54#0" expanded="true" />
               </folding>
@@ -118,18 +119,21 @@
       <workItem from="1553101604792" duration="313000" />
       <workItem from="1553258929308" duration="1791000" />
       <workItem from="1553365331136" duration="1328000" />
-      <workItem from="1553370034599" duration="6807000" />
+      <workItem from="1553370034599" duration="6971000" />
+      <workItem from="1553449339804" duration="172000" />
+      <workItem from="1553456577370" duration="603000" />
+      <workItem from="1553504659711" duration="3907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10239000" />
+    <option name="totallyTimeSpent" value="15085000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13229571" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1372985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -165,10 +169,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/human.rdf">
+    <entry file="file://$PROJECT_DIR$/miniprojejRDF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="132" column="24" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="24" />
+        <state relative-caret-position="270">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <folding>
+            <element signature="e#41#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -179,13 +186,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniprojejRDF.py">
+    <entry file="file://$PROJECT_DIR$/human.rdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="72" selection-start-line="72" selection-start-column="2" selection-end-line="95" selection-end-column="92" />
-          <folding>
-            <element signature="e#41#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2376">
+          <caret line="132" column="24" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="24" />
         </state>
       </provider>
     </entry>
