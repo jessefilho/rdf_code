@@ -42,7 +42,10 @@ g.parse('human.rdf')
 # ------------------------------------- #3 [DONE]
 # I will add data of ?name ?pointure ?shirtsize ?age ?shoesize ?trouserssize
 #
-
+import pprint
+for stmt in g:
+    pprint.pprint(stmt)
+#laura = BNodes()
 humans = Namespace("http://www.inria.fr/2007/09/11/humans.rdfs#")
 
 laura = rd.URIRef("http://www.inria.fr/2007/09/11/humans.rdfs-instances#Laura")
@@ -60,13 +63,15 @@ g.add((laura, humans.age, lauraAge))
 g.add((laura, humans.shoesize, lauraShoesize))
 g.add((laura, humans.trouserssize, lauraTrouserssize))
 
+#g.set((laura, humans.age, lauraAge))
+
 # print "check transitive objects"
 # for i in modifG.transitive_objects(laura,humans.shirtsize):
 #     print i
 # ------------------------------------- #4 [DONE]
-# fp = open('human_withLauraUPDATE.rdf','wb')
-# fp.write(g.serialize(format='turtle'))
-# fp.close()
+fp = open('human_withLauraUPDATEDEMO.rdf','wb')
+fp.write(g.serialize(format='turtle'))
+fp.close()
 
 
 
@@ -115,7 +120,7 @@ FILTER (xsd:string(?name) = "John" )
 """)
 
 
-#for row in qres:
+# for row in qres:
 #    print("Name: %s Pointure: %s shirtsize:%s Age:%s shoesize:%s trouserssize:%s" % row)
 
 # ------------------------------------- #5 [DONE]
@@ -134,7 +139,7 @@ qres = g.query(
 # for row in qres:
 #     print(row)
 
-
+# ------------------------------------- #7 [DONE]
 
 qres = g.query(
     """
@@ -151,9 +156,9 @@ qres = g.query(
     """)
 
 # for row in qres:
-#     print('name:%s friend:%s' % row)
-
-#g.serialize(destination='output.txt', format='turtle')
+#     print(row)
+#
+# g.serialize(destination='output.txt', format='turtle')
 
 
 
@@ -172,8 +177,8 @@ qres = g_schema.query(
     }
     """)
 
-for row in qres:
-    print(row)
+# for row in qres:
+#    print(row)
 
 qres = g_schema.query(
     """
@@ -214,11 +219,25 @@ qres = g_schema.query(
      
     SELECT distinct ?name ?spouse
     WHERE {
-        ?name ?p humans:Man .
+        ?name ?p humans:Woman .
         ?name humans:hasSpouse ?spouse
 	
     }
     """)
 
-for row in qres:
-    print(row)
+# for row in qres:
+#    print(row)
+
+#DBPedia
+
+from rdflib import Graph, URIRef, RDF
+uri = URIRef('http://dbpedia.org/resource/Richard_Nixon')
+person = URIRef('http://dbpedia.org/ontology/Person')
+
+g = Graph()
+g.parse(uri)
+
+# for obj in g.objects(subject=uri, predicate=RDF.type):
+#     if obj == person:
+#         print uri, "is a", person
+

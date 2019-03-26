@@ -83,7 +83,7 @@
 <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Laura> a :Lecturer,
         :Person,
         :Researcher ;
-    :age "39" ;
+    :age "40" ;
     :hasFriend <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Alice> ;
     :name "Laura" ;
     :shirtsize "10" ;
